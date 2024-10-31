@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AOS 動畫</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        .effect {
+            height: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .effect:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid justify-content-center">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <div class="navbar-header d-flex align-items-center"> <!-- 新增 div 以包裹標題和 LOGO -->
+                        <a class="navbar-brand" href="index.html">JS套件介紹
+                            <img src="https://i0.wp.com/tw.alphacamp.co/wp-content/uploads/2022/12/60e827295bbd949f8a41a2ec_5d5b7df8da745a6fcc9a7fe1_5b9110e86e11f7d979b0dc36_javascript.png?fit=785%2C340&ssl=1"
+                                alt="LOGO" width="60" height="24">
+                        </a>
+                    </div>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a></li>
+                    <li class="nav-item"><a class="nav-link" href="文字轉語音.html">文字轉語音</a></li>
+                    <li class="nav-item"><a class="nav-link" href="動畫展示.html">Lottie 動畫</a></li>
+                    <li class="nav-item"><a class="nav-link" href="圖表展示.html">Chart.js 圖表</a></li>
+                    <li class="nav-item"><a class="nav-link" href="圖片懶加載.html">圖片懶加載</a></li>
+                    <li class="nav-item"><a class="nav-link" href="文字轉.html">文字轉語</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h1>AOS動畫效果</h1>
+        <a href="https://michalsnik.github.io/aos/" target="_blank" class="btn btn-primary">AOS 官網</a>
+        <hr class="my-4">
+
+        <div class="container mt-5">
+            <h1>程式碼範例</h1>
+
+            <!-- 使用 <pre> 標籤顯示 HTML 程式碼 -->
+            <pre>
+                            &lt;!-- AOS CSS 和 JS --&gt;
+                    &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"&gt;
+                    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"&gt;&lt;/script&gt;
+                
+                    &lt;!-- 初始化 AOS --&gt;
+                    &lt;script&gt;
+                        AOS.init();
+                    &lt;/script&gt;
+                
+                            &lt;div data-aos="fade-up"&gt;Fade Up 動畫&lt;/div&gt;
+                            &lt;div data-aos="fade-down"&gt;Fade Down 動畫&lt;/div&gt;
+                            &lt;div data-aos="fade-left"&gt;Fade Left 動畫&lt;/div&gt;
+                            &lt;div data-aos="fade-right"&gt;Fade Right 動畫&lt;/div&gt;
+                            &lt;div data-aos="zoom-in"&gt;Zoom In 動畫&lt;/div&gt;
+                            &lt;div data-aos="zoom-out"&gt;Zoom Out 動畫&lt;/div&gt;
+                            &lt;div data-aos="flip-left"&gt;Flip Left 動畫&lt;/div&gt;
+                            &lt;div data-aos="flip-right"&gt;Flip Right 動畫&lt;/div&gt;
+                            &lt;div data-aos="slide-up"&gt;Slide Up 動畫&lt;/div&gt;
+                            &lt;div data-aos="slide-down"&gt;Slide Down 動畫&lt;/div&gt;
+                            &lt;div data-aos="slide-left"&gt;Slide Left 動畫&lt;/div&gt;
+                            &lt;div data-aos="slide-right"&gt;Slide Right 動畫&lt;/div&gt;
+                </pre>
+
+        </div>
+
+        <!-- AOS JS 和初始化 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- 增加一個 canvas 元素，用於 Chart.js -->
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <h2>範例效果</h2>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-primary text-white effect" data-aos="fade-up">
+                    <div class="p-3">
+                        <h5>漸變效果</h5>
+                        <p>這是一個漸變進入的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-success text-white effect" data-aos="fade-down">
+                    <div class="p-3">
+                        <h5>漸變向下</h5>
+                        <p>這是一個漸變向下的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-danger text-white effect" data-aos="fade-left">
+                    <div class="p-3">
+                        <h5>漸變向左</h5>
+                        <p>這是一個漸變向左的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-warning text-dark effect" data-aos="fade-right">
+                    <div class="p-3">
+                        <h5>漸變向右</h5>
+                        <p>這是一個漸變向右的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-info text-white effect" data-aos="zoom-in">
+                    <div class="p-3">
+                        <h5>放大效果</h5>
+                        <p>這是一個放大的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-secondary text-white effect" data-aos="zoom-out">
+                    <div class="p-3">
+                        <h5>縮小效果</h5>
+                        <p>這是一個縮小的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-dark text-white effect" data-aos="flip-left">
+                    <div class="p-3">
+                        <h5>翻轉向左</h5>
+                        <p>這是一個翻轉的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-light text-dark effect" data-aos="flip-right">
+                    <div class="p-3">
+                        <h5>翻轉向右</h5>
+                        <p>這是一個翻轉的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-primary text-white effect" data-aos="slide-up">
+                    <div class="p-3">
+                        <h5>滑動向上</h5>
+                        <p>這是一個滑動向上的效果。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12">
+                <div class="bg-success text-white effect" data-aos="slide-down">
+                    <div class="p-3">
+                        <h5>滑動向下</h5>
+                        <p>這是一個滑動向下的效果。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 你的網站名稱. 版權所有.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
